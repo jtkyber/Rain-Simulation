@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    position: relative;
+    height: 100vmin;
+    width: 100vmin;
+    background: url('wetStreet.jpg');
+    /*background-color: black;*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+.droplet {
+    position: absolute;
+    border-radius: 0 50% 50% 50%;
+    background-color: rgba(50,60,75,0.5);
+    /*background-color: white;*/
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 2px 1px rgba(100,120,150,0.5);
+}
+
+.splatterEffect {
+    position: absolute;
+    border-radius: 100%;
+    height: 2px;
+    width: 8px;
+    opacity: 0;
+    background-color: rgba(100,120,150,0.3);
+    box-shadow: 0px 0px 4px 0.1px white;
+    -webkit-animation: splatterDissolve 0.5s linear;
+    animation: splatterDissolve 0.5s linear;
+}
+
+@-webkit-keyframes splatterDissolve {
+  0% {opacity: 1; transform: scale(1.0);}
+  100% {opacity: 0; transform: scale(3);}
+}
+@keyframes splatterDissolve {
+  0% {opacity: 1; transform: scale(1.0);}
+  100% {opacity: 0; transform: scale(3);}
+}
+
