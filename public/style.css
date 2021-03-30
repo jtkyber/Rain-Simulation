@@ -22,6 +22,19 @@ body {
     }
 }
 
+@media only screen and (max-height: 700px) and (orientation:landscape) {
+    .canvas {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background: url('wetMountains.jpg');
+        /*background-color: black;*/
+        background-size: cover;
+        background-position: center bottom;
+        overflow: hidden;
+    }
+}
+
 @media only screen and (orientation:portrait) {
     .canvas {
         position: relative;
