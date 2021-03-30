@@ -4,6 +4,7 @@ const drops = [];
 let tempDrops = [];
 const splatters = [];
 let splatterId = 0;
+let splatterSize;
 let count = 0;
 let dropId;
 let dropSize;
@@ -70,6 +71,8 @@ export const draw = () => {
             splatter.style.top = drops[i].stopLocation + 'px';
             splatter.style.left = d.style.left;
             splatter.id = 'splat' + splatterId;
+            splatter.style.width = (drops[i].size) * 1.8 + 'px';
+            splatter.style.height = (drops[i].size / 4) * 1.8 + '2px';
             splatters.push(splatter.id);
             canvas.append(splatter);
             d.remove();
