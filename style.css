@@ -9,20 +9,36 @@ body {
     align-items: center;
 }
 
-.canvas {
-    position: relative;
-    height: 100vmin;
-    width: 100vmin;
-    background: url('wetStreet.jpg');
-    /*background-color: black;*/
-    background-size: cover;
-    overflow: hidden;
+@media only screen and (orientation:landscape) {
+    .canvas {
+        position: relative;
+        height: 100vh;
+        width: 100vmin;
+        background: url('wetMountains.jpg');
+        /*background-color: black;*/
+        background-size: cover;
+        background-position: center bottom;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (orientation:portrait) {
+    .canvas {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background: url('wetMountains.jpg');
+        /*background-color: black;*/
+        background-size: cover;
+        background-position: center bottom;
+        overflow: hidden;
+    }
 }
 
 .droplet {
     position: absolute;
     border-radius: 0 50% 50% 50%;
-    background-color: rgba(50,60,75,0.5);
+    background-color: rgba(100,120,150,0.5);
     /*background-color: white;*/
     transform: rotate(45deg);
     box-shadow: 0px 0px 2px 1px rgba(100,120,150,0.5);
@@ -34,8 +50,8 @@ body {
     height: 2px;
     width: 8px;
     opacity: 0;
-    background-color: rgba(100,120,150,0.3);
-    box-shadow: 0px 0px 4px 0.1px white;
+    background-color: rgba(50,50,100,0.3);
+    box-shadow: 0px 0px 4px 0.1px rgba(255,255,255, 0.8);
     -webkit-animation: splatterDissolve 0.5s linear;
     animation: splatterDissolve 0.5s linear;
 }

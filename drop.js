@@ -18,7 +18,7 @@ const setDropSize = () => {
     else if (randNum < 39) dropSize = dropScaler + (Math.random() * (6 - 5) + 5);
     else if (randNum < 120) dropSize = dropScaler + (Math.random() * (5 - 4) + 4);
     else if (randNum < 363) dropSize = dropScaler + (Math.random() * (4 - 3) + 3);
-    else dropSize = dropScaler + (Math.random() * (3 - 2) + 2);
+    else dropSize = dropScaler + (Math.random() * (3 - 1) + 1);
 }
 
 export const update = () => {
@@ -31,7 +31,7 @@ export const update = () => {
             id: dropId,
             size: dropSize,
             speed: dropSize / 30,
-            stopLocation: (canvas.getBoundingClientRect().bottom - 400) + (dropSize * 50)
+            stopLocation: (canvas.getBoundingClientRect().bottom - 480) + (dropSize * 60)
         })
         tempDrops.push(drops[drops.length - 1]);
 
@@ -40,7 +40,7 @@ export const update = () => {
     }
 
     for (let drop of drops) {
-            drop.y += (drop.speed * drop.y / 4) + 3;
+            drop.y += (drop.speed * drop.y / 4) + 8;
         }
 
 }
